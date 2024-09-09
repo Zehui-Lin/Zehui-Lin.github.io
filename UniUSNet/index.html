@@ -1,0 +1,406 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="UniUSNet: A Promptable Framework for Universal Ultrasound Disease Prediction and Tissue Segmentation, UniUSNet">
+    <meta name="description"
+        content="UniUSNet: A Promptable Framework for Universal Ultrasound Disease Prediction and Tissue Segmentation, BIBM 2024">
+    <title>UniUSNet: A Promptable Framework for Universal Ultrasound Disease Prediction and Tissue Segmentation</title>
+
+    <link rel="stylesheet" type="text/css" href="./resources/text.css">
+
+    <meta property="og:image" content='./resources/uniusnet.png'>
+    <meta property="og:title"
+        content="UniUSNet: A Promptable Framework for Universal Ultrasound Disease Prediction and Tissue Segmentation, BIBM 2024">
+</head>
+
+
+
+
+<body>
+
+    <br>
+    <center>
+        <span style="font-size:36px">
+            UniUSNet: A Promptable Framework for Universal Ultrasound Disease Prediction and Tissue Segmentation </span>
+    </center>
+    <br>
+
+    <!-- 第一行作者 -->
+    <table align="center" width="800px">
+        <tbody>
+            <tr>
+
+                <td align="center" width="160px">
+                    <center>
+                        <span style="font-size:18px"><a href="https://zehui-lin.github.io/">Zehui
+                                Lin</a><sup>1</sup></span>
+                    </center>
+                </td>
+
+                <td align="center" width="160px">
+                    <center>
+                        <span style="font-size:18px">Zhuoneng Zhang<sup>1</sup></span>
+                    </center>
+                </td>
+
+                <td align="center" width="160px">
+                    <center>
+                        <span style="font-size:18px">Xindi Hu<sup>2</sup></span>
+                    </center>
+                </td>
+
+                <td align="center" width="160px">
+                    <center>
+                        <span style="font-size:18px"><a href="https://zhifan-gao.github.io/">Zhifan
+                                Gao</a><sup>3</sup></span>
+                    </center>
+                </td>
+
+                <td align="center" width="160px">
+                    <center>
+                        <span style="font-size:18px"><a href="https://xy0806.github.io/">Xin Yang</a><sup>4</sup></span>
+                    </center>
+                </td>
+
+            </tr>
+        </tbody>
+    </table><br>
+
+
+    <!-- 第二行作者 -->
+    <table align="center" width="750px">
+        <tbody>
+            <tr>
+
+                <td align="center" width="160px">
+                    <center>
+                        <span style="font-size:18px"><a
+                                href="https://scholar.google.com/citations?hl=en&user=lxxn3CcAAAAJ">Yue
+                                Sun</a><sup>1</sup></span>
+                    </center>
+                </td>
+
+                <td align="center" width="160px">
+                    <center>
+                        <span style="font-size:18px"><a
+                                href="https://scholar.google.com/citations?user=J27J2VUAAAAJ&hl=en&oi=ao">Dong
+                                Ni</a><sup>4</sup></span>
+                    </center>
+                </td>
+
+                <td align="center" width="160px">
+                    <center>
+                        <span style="font-size:18px"><a
+                                href="https://scholar.google.com/citations?user=lLg3WRkAAAAJ&hl=en&oi=ao">Tao
+                                Tan</a><sup>1,<img class="round" style="width:20px"
+                                    src="./resources/corresponding_fig.png"></sup></span>
+                    </center>
+                </td>
+
+            </tr>
+        </tbody>
+    </table><br>
+
+
+
+
+    <!-- 单位 -->
+    <table align="center" width="700px">
+        <tbody>
+            <tr>
+                <td align="center" width="300px">
+                    <center>
+                        <span style="font-size:18px"><sup>1</sup>Faculty of Applied Sciences, Macao Polytechnic
+                            University</span>
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table align="center" width="700px">
+        <tbody>
+            <tr>
+                <td align="center" width="600px">
+                    <center>
+                        <span style="font-size:18px"><sup>2</sup>Shenzhen RayShape Medical Technology Co. Ltd.</span>
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table align="center" width="700px">
+        <tbody>
+            <tr>
+                <td align="center" width="600px">
+                    <center>
+                        <span style="font-size:18px"><sup>3</sup>School of Biomedical Engineering,
+                            Sun Yat-sen University</span>
+                    </center>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <table align="center" width="700px">
+        <tbody>
+            <tr>
+                <td align="center" width="600px">
+                    <center>
+                        <span style="font-size:18px"><sup>4</sup>School of Biomedical Engineering, Shenzhen
+                            University</span>
+                    </center>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <hr>
+    <center>
+        <h1>Abstract</h1>
+    </center>
+    <div align="justify">
+        Ultrasound is widely used in clinical practice due to its affordability, portability, and safety. However,
+        current AI research often overlooks combined disease prediction and tissue segmentation. We propose UniUSNet, a
+        universal framework for ultrasound image classification and segmentation. This model handles various ultrasound
+        types, anatomical positions, and input formats, excelling in both segmentation and classification tasks. Trained
+        on a comprehensive dataset with over 9.7K annotations from 7 distinct anatomical positions, our model matches
+        state-of-the-art performance and surpasses single-dataset and ablated models. Zero-shot and fine-tuning
+        experiments show strong generalization and adaptability with minimal fine-tuning. We plan to expand our dataset
+        and refine the prompting mechanism, with model weights and code available at <a
+            href="https://github.com/Zehui-Lin/UniUSNet">GitHub</a>.
+    </div>
+    <br>
+
+    <hr>
+    <center>
+        <h1>The BroadUS-9.7K Dataset</h1>
+    </center>
+    <p>
+    <figure>
+        <img style="width:700px" src='./resources/dataset.png'>
+        <br><br>
+        <figcaption>The BroadUS-9.7K dataset contains 9.7K annotations of 6.9K ultrasound images from 7 different
+            anatomical positions. (a) The number of effective instances corresponding to nature of the image, position,
+            task and input type. Note that a breast image can contain both segmentation and classification labels, and
+            an image with segmentation labels can form three different input types (b) The different anatomical
+            positions, and their corresponding public dataset abbreviations.
+        </figcaption>
+    </figure>
+    </p>
+
+
+    <hr>
+    <center>
+        <h1>Architecture</h1>
+    </center>
+    <p>
+    <figure>
+        <img style="width:700px" src='./resources/uniusnet.png'>
+        <br><br>
+        <figcaption>The architecture of UniUSNet is a general encoder-decoder model that uses prompts to simultaneously
+            handle multiple ultrasound tasks like segmentation and classification. The encoder extracts features, while
+            task-specific decoders are enhanced by four types of prompts—nature, position, task, and type—added to each
+            transformer layer via prompt projection embedding, boosting the model’s versatility and performance.
+        </figcaption>
+    </figure>
+    </p>
+
+
+    <hr>
+    <center>
+        <h1>Results</h1>
+    </center>
+
+    <p style="font-weight: bold; font-size: large;">
+        R1: OVERALL PERFORMANCE COMPARISON ON BOARDUS-9.7K DATASET.
+    </p>
+    <p>
+        <center><img style="width:700px" src='./resources/result1.png'></center>
+    </p>
+    <p>
+        <style>
+            p {
+                font-size: 12px;
+            }
+        </style>
+            SAM’s official weights perform poorly in zero-shot inference (37.12%) due to the domain gap between natural and medical images. SAMUS improves performance (80.65%) but doesn’t surpass the Single model, likely due to dataset heterogeneity. Our automatic prompt model, with 66% fewer parameters, achieves similar segmentation results (80.01%). Ablation studies reveal that UniUSNet (79.89%) outperforms both the ablation version (78.46%) and Single (78.43%) models, proving the effectiveness of prompts. While UniUSNet and UniUSNet w/o prompt models have fewer parameters, they excel in classification over segmentation, possibly due to the network’s multi-branch structure, suggesting a need for more balanced learning.
+    </p>
+
+    <p style="font-weight: bold; font-size: large;">
+        R2: Some examples of segmentation result. Each column From left to
+        right: original image, SAM, SAMUS, Single, UniUSNet w/o prompt, Prompt
+        and ground truth.
+    </p>
+    <p>
+        <center><img style="width:700px" src='./resources/result2.png'></center>
+    </p>
+
+    <p>
+        <style>
+            p {
+                font-size: 12px;
+            }
+        </style>
+        Segmentation results reveal that UniUSNet outperforms SAM and other models by effectively using nature and position prompts for deeper task understanding.
+    </p>
+
+    <p style="font-weight: bold; font-size: large;">
+        R3: t-SNE visualization.
+    </p>
+    <p>
+        <center><img style="width:700px" src='./resources/result3.png'></center>
+    </p>
+
+    <p>
+        <style>
+            p {
+                font-size: 12px;
+            }
+        </style>
+        We visualized feature distributions of the BUS-BRA, BUSIS, and UDIAT datasets. The Figure shows that the Single model has a clear domain shift, while UniUSNet w/o prompt reduces this shift, indicating better domain adaptation. Prompts further minimize the domain offset.
+    </p>
+
+    <p style="font-weight: bold; font-size: large;">
+        R4: ADAPTER PERFORMANCE COMPARISON ON BUSI DATASET.
+    </p>
+    <p>
+        <center><img style="width:700px" src='./resources/result4.png'></center>
+    </p>
+
+    <p>
+        <style>
+            p {
+                font-size: 12px;
+            }
+        </style>
+       The table shows that UniUSNet w/o prompt and UniUSNet outperform the Single model, demonstrating better generalization and prompt effectiveness. Additionally, the Adapter setup, with minimal fine-tuning, surpasses the Scratch setup, showcasing our model’s adaptability to new datasets efficiently.
+    </p>
+
+
+    <hr>
+    <center>
+        <h1>Video</h1>
+    </center>
+    <center>
+        <!-- Coming Soon -->
+        Coming Soon
+    </center>
+    <br>
+
+    <hr>
+    <center>
+        <h1>Publications</h1>
+    </center>
+
+    <script type="text/javascript">
+        function show_hide(eid) {
+            var x = document.getElementById(eid);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <table align="center" width="700px">
+        <tbody>
+            <tr>
+                <td>
+                    <a href="https://zehui-lin.github.io/UniUSNet/"><img class="layered-paper-big" style="height:175px"
+                            src="./resources/uniusnet_page1.png"></a>
+                </td>
+
+                <td width="500px">
+                    <span style="font-size:18px">
+
+                        <div class="title">
+                            <b>UniUSNet: A Promptable Framework for Universal Ultrasound Disease Prediction and Tissue
+                                Segmentation.</b>
+                        </div>
+
+                        <div class="authors">
+                            Zehui Lin,
+                            Zhuoneng Zhang,
+                            Xindi Hu,
+                            Zhifan Gao,
+                            Xin Yang,
+                            Yue Sun,
+                            Dong Ni,
+                            Tao Tan
+                        </div>
+
+                        <div class="conf">
+                            BIBM, 2024
+                        </div>
+
+                        <div class="links">
+                            <a href="javascript:;" onclick="show_hide('Biblin2024uniusnet')"> Bibtex </a>
+                            | <a href="https://arxiv.org/pdf/2406.01154"> PDF </a>
+                            | <a href="https://arxiv.org/abs/2406.01154"> arXiv </a>
+                            | <a href="https://github.com/Zehui-Lin/UniUSNet"> Code </a>
+                            | Video
+                        </div>
+
+                        <div style="display: none;" class="BibtexExpand" id="Biblin2024uniusnet">
+                            <div style="width:500px;overflow:visible;">
+                                <pre class="bibtex" style="font-size:12px">@article{lin2024uniusnet,
+title={UniUSNet: A Promptable Framework for Universal Ultrasound Disease Prediction and TissueSegmentation},
+author={Lin, Zehui and Zhang, Zhuoneng and Hu, Xindi and Gao, Zhifan and Yang, Xin and Sun, Yue andNi, Dong and Tan, Tao},
+journal={arXiv preprint arXiv:2406.01154},
+year={2024}
+}
+                                </pre>
+                            </div>
+                        </div>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <br><br>
+    <br><br>
+    <hr>
+
+    <center>
+        <h1>Support</h1>
+    </center>
+
+    <p style="font-size:18px;">
+        We provide a detailed data processing method for the BroadUS-9.7K dataset (<a href="https://github.com/Zehui-Lin/UniUSNet?tab=readme-ov-file#data">link</a>), as well as a data demo for checking whether the data format is prepared properly and for quickly starting experiments or inferences (<a href="https://github.com/Zehui-Lin/UniUSNet/tree/main/data_demo">link</a>).
+    </p>
+
+    <p style="font-size:18px;">
+        Pretrained models can be downloaded here (<a href="https://pan.baidu.com/s/1uciwM5K4wRiMWnrAsB4qMQ?pwd=x390">link</a>).
+    </p>
+
+    <br><br>
+    <hr>
+
+    <center>
+        <h1>Acknowledgements</h1>
+    </center>
+    This work was supported by Science and Technology Development Fund of Macao (0021/2022/AGJ) and Science and Technology Development Fund of Macao (0041/2023/RIB2).
+
+    <br><br>
+    <br><br>
+
+    <p style="text-align:center;font-size:14px;">
+        Webpage template modified from <a href="https://richzhang.github.io/splitbrainauto/">Richard Zhang</a>.
+    </p>
+
+
+</body>
+</html>
